@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Wish Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="welcome-page active">
+        <div class="background-animation"></div>
+        <div class="confetti-container" id="confettiContainer"></div>
+        
+        <div class="welcome-card">
+            <div class="card-content">
+                <h1 class="main-title">🎉 Happy Birthday Sarah! 🎉</h1>
+                <p class="subtitle">💖 Best Wishes for You! 💖</p>
+                <div class="sparkle-effect">
+                    <span class="sparkle">✨</span>
+                    <span class="sparkle">⭐</span>
+                    <span class="sparkle">💫</span>
+                </div>
+                <button class="open-wishes-btn" onclick="openWishes()">
+                    <span>Open Wishes</span>
+                    <i class="fas fa-gift"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Music Control -->
+        <div class="music-control">
+            <button id="musicToggle" onclick="toggleMusic()">
+                <i class="fas fa-music"></i>
+            </button>
+        </div>
+
+        <!-- Background Music -->
+        <audio id="backgroundMusic" loop>
+            <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBzKa2+/Bbyt+LAff6txzIwU6ltryxn4qBC93zu7ZezIFLYnM6deHUwwMUarm7KJECg4JCw0IDAcNCwkIDA" type="audio/wav">
+        </audio>
+    </div>
+
+    <!-- Wishes Page -->
+    <div id="wishesPage" class="wishes-page">
+        <header class="wishes-header">
+            <h2>💝 Beautiful Wishes for You 💝</h2>
+            <p>Each message is filled with love and joy</p>
+        </header>
+
+        <div class="wishes-container">
+            <div class="wish-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-inner">
+                    <div class="wish-icon">🌟</div>
+                    <h3>Shining Bright</h3>
+                    <p>May your special day be filled with happiness, laughter, and all the things that make you smile. You deserve nothing but the best! ✨</p>
+                </div>
+            </div>
+
+            <div class="wish-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-inner">
+                    <div class="wish-icon">🎈</div>
+                    <h3>Celebrate Life</h3>
+                    <p>Another year of wonderful memories and amazing adventures awaits you. Here's to making every moment count! 🎉</p>
+                </div>
+            </div>
+
+            <div class="wish-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-inner">
+                    <div class="wish-icon">💖</div>
+                    <h3>With Love</h3>
+                    <p>Sending you warm hugs, sweet smiles, and heartfelt wishes on your birthday. You mean the world to us! 🤗</p>
+                </div>
+            </div>
+
+            <div class="wish-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-inner">
+                    <div class="wish-icon">🌺</div>
+                    <h3>Beautiful Soul</h3>
+                    <p>Your kindness and beautiful spirit inspire everyone around you. May this new year bring you endless joy and success! 🌸</p>
+                </div>
+            </div>
+
+            <div class="wish-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="card-inner">
+                    <div class="wish-icon">🎂</div>
+                    <h3>Sweet Moments</h3>
+                    <p>Life is like a cake - sweet, layered with memories, and best enjoyed with people you love. Enjoy every bite of life! 🍰</p>
+                </div>
+            </div>
+
+            <div class="wish-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="card-inner">
+                    <div class="wish-icon">🌈</div>
+                    <h3>Colorful Journey</h3>
+                    <p>May your path ahead be filled with vibrant colors, beautiful surprises, and dreams coming true. Happy Birthday! 🦋</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="surprise-section">
+            <button class="surprise-btn" onclick="showSurprise()">
+                🎁 Get a Surprise
+            </button>
+        </div>
+
+        <button class="back-btn" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i> Back to Welcome
+        </button>
+    </div>
+
+    <!-- Surprise Modal -->
+    <div id="surpriseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSurprise()">&times;</span>
+            <div class="surprise-content">
+                <h2>🎊 Surprise! 🎊</h2>
+                <div class="surprise-image">🎈🎂🎉</div>
+                <p>You are absolutely amazing and deserve all the happiness in the world! Keep shining your beautiful light! ✨💖</p>
+                <div class="surprise-hearts">
+                    <span>💖</span>
+                    <span>💕</span>
+                    <span>💗</span>
+                    <span>💝</span>
+                    <span>💖</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
